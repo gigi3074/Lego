@@ -1,0 +1,382 @@
+/* 초기화 */
+/* 제목 태그 초기화 */
+h1, h2, h3, h4, h5, h6 {font-size: 13px; font-weight: normal;}
+
+/* 컨테츠 */
+section{margin-top: 5%;}
+.link_line a {
+    margin: 0 0.9%;
+    font-size: 1em; color: #FFCF00;
+}
+.link_line a::after{
+    content: ">";display: inline-block;
+    padding: 0 10px;
+    font-size: 10px;
+    color: #222;
+    position: relative; top: -2px;
+}
+.link_line a:last-child::after{
+    content: ""; display: none;
+}
+
+
+/* 제품 */
+.img_area{width: 99%; display: flex; flex-wrap: wrap;}
+/* 이미지 리스트 */
+.innerBox{
+    width: 50%;
+    display: flex;
+    flex-direction: row;justify-content: space-evenly;
+}
+.img_area .main_img_slice{
+    width: 8vw;
+    min-height: 50%;
+    display: grid;
+    grid-template-columns: 80%;  
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.img_area .main_img_slice div{
+    width: 7vw; height:5vw;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+.img_area .main_img_slice img{
+    width: 7vw; object-fit:scale-down;
+}
+/* 큰이미지 */
+.img_area .main_img{
+    width: inherit;
+    margin: auto;
+    background-color: #fff;
+}
+.img_area .main_img img{
+    width:100%; 
+    padding: auto;object-fit:contain;
+    object-position: center;
+}
+
+
+
+/* 제품인포 */
+.img_area .item_nav{
+   height: 100%; width: 30%; max-height: inherit; position: relative;
+}
+.img_area .item_nav h4{
+    width: 100%; font-weight: bold;
+    font-size: 2em;
+    padding: 5% 10%;
+}
+.img_area .item_nav h5{
+    width: 100%; padding: 0 10%;
+    font-size: 1.3em; font-weight: bold;
+}
+.img_area .item_nav .btn_like{
+    width: 130%; padding: 2%; font-size: 1.2em;
+}
+/* 하트 */
+.btn_like i{
+    color: transparent;
+    text-shadow: 0 0 1px rgba(255,255,255,.7), 0 0 0 rgb(0, 0, 0);
+    position: absolute;
+    left: 10%; top: 22%;
+}
+.btn_like i:hover {text-shadow: 0 0 0 #ea0;}
+.btn_like i.done {color: #BF2604;text-shadow: 0;}
+.btn_like i.done:hover {color: transparent;text-shadow: 0 0 0 #777;}
+
+.img_area .item_nav .warning{
+    width: 100%; 
+    padding: 1% 1%; margin: 30% 10% 0;
+    display: grid; align-items: center;
+    grid-template-columns: 60% 40%;
+}
+.img_area .item_nav .warning p{font-size: 0.8em;}
+.img_area .item_nav .warning figure{width: 100%;}
+.img_area .item_nav .warning img{width: 100%;}
+.img_area .guidelines{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.img_area .guidelines i {color: #de2c04;}
+.img_area .guidelines .info{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    width: 100%; padding: 5% 3%; margin-left: 5%;
+    border-top: 1px solid #eee;
+}
+.img_area .guidelines .delivery{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    width: 100%; padding: 5% 3%; margin-left: 5%;
+    border-top: 1px solid #eee;
+}
+.img_area .guidelines .assembly_manual{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    width: 100%; padding: 5% 3%; margin-left: 5%;
+    border-top: 1px solid #eee;
+}
+
+/* 참고사항 */
+.img_area .item_notes{
+    width: 50%;
+    display: flex;
+    margin: 0 10%;
+    padding: 2% 0;
+}
+.img_area .item_notes .notes{
+    width: 15%; text-align: center;
+    padding: 5%; margin: 5% 0;
+    border-right: 1px solid rgba(136, 136, 136, 0.501);
+}
+.img_area .item_notes .notes:last-child{border: 0;}
+.img_area .item_notes .notes h2{font-size: 2em;
+font-weight: bold; margin: 12% 0;}
+.img_area .item_notes .notes p{font-size: 1em;}
+
+
+/* 추천제품 */
+.recom_slice {width: 100%; position: relative;}
+/* 타이틀 */
+.recom_slice .recom_title{width: 100%;padding: 1% 2%;}
+.recom_slice .recom_title h2{font-size: 2em;font-weight: bold;}
+/* 슬라이드 */
+.recom_slice .re_slider{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+} 
+.recom_slice .recom_box{
+    box-sizing: border-box;
+    width: 100%; margin: 0 1%; padding: 0 1%;
+}
+.recom_slice .recom_box .re_img{
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    height: 10em; width: 10em;
+    overflow: hidden;
+}
+.recom_slice .recom_box .re_img img{
+    object-fit: scale-down;
+    width: inherit; height: inherit; margin: 0 auto;
+}
+/* 슬라이스 버튼 */
+.recom_slice .slick-dots{display: block; width: 100%; text-align: center;}
+.recom_slice .slick-dots li{display: inline-block; width: 15px;height: 15px;margin: 5px;}
+.recom_slice .slick-dots li button{
+    font-size: 0; line-height: 0;
+    display: block; width: 15px;height: 15px;
+    cursor: pointer;
+    background: #de2c04;
+    border-radius: 50%;
+}
+.recom_slice .slick-dots li.slick-active button {background: #781903;}
+.recom_slice .slick-prev {
+    position: absolute; left: 0;bottom: 0; z-index: 1000;
+    width: 30px; height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.recom_slice .slick-prev::before{
+    content: "\f053";
+    color: #de2c04;
+    text-indent: 0;
+    position: absolute;left: 9px;top: 8px;
+}
+.recom_slice .slick-next {
+    position: absolute; right: 0;bottom: 0; z-index: 1000;
+    width: 30px; height: 30px;
+    display: inline-block; 
+    text-indent: -9999px;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.recom_slice .slick-next::before{
+    content: "\f054";
+    color: #de2c04;
+    text-indent: 0;
+    position: absolute; left: 11px;top: 8px;
+}
+/* 추천제품텍스트 */
+.recom_slice .recom_box .txt{
+    width: 100%; margin: 3% 10%;
+}
+.recom_slice .recom_box .txt h4{font-size: 1em; margin: 0 0 10%;}
+.recom_slice .recom_box .txt h5{font-size: 0.9em; margin: 0 0 2%; font-weight: bold;}
+/* 추천제품장바구니버튼 */
+.recom_slice .recom_box .btn{text-align: center;width: 100%;}
+.recom_slice .recom_box button{
+    width: 85%;border: 1px solid #781903; border-radius: 5px;
+    background-color: #BF2604; color: #fff;
+    font-size: 1em; font-weight: bold; padding: 5% 0;
+    margin: 0 auto;
+}
+
+/* 상품상세설명페이지타이틀 */
+.item_btn{width: 100%;background-color: #eee;
+    position: relative; height: 70px;}
+.item_btn .details_btn {width: 100%;}
+.item_btn .details_btn h4{
+    position: absolute; left: 2%; top: 30%;
+    font-size: 2em;font-weight: bold;
+}
+.item_btn .details_btn i{
+    position: absolute; right: 2%; top: 30%;
+    width: 30px; height: 30px;
+    line-height: 30px;
+    background: #fff;
+    font-size: 1.5em;
+    border: 1px solid #777;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-align:center;
+}
+/* 상품상세설명페이지 */
+.item_details{width: 90%;display: flex;margin: 0 auto;}
+.item_details .txt{
+    width: 60%;
+    padding: 3%;
+    font-size: 16px;
+    line-height: 145%;
+}
+.item_details .txt li{
+    list-style-type:disc;
+    margin: 5% 0 5% 5%;
+}
+.item_details .img{width: 30%; overflow: hidden; margin: 1% 5% 5% 8%;}
+.item_details .img img{width: 80%;}
+/* 리뷰게시판 */
+/* 타이틀 */
+.re_btn{width: 100%;background-color: #eee;
+    position: relative; height: 70px;}
+.re_btn .re_title {width: 100%;}
+.re_btn .re_title h4{
+    position: absolute; left: 2%; top: 30%;
+    font-size: 2em; font-weight: bold;
+}
+.re_btn .re_title i{
+    position: absolute; right: 2%; top: 30%;
+    width: 30px; height: 30px;
+    line-height: 30px;
+    background: #fff;
+    font-size: 1.5em;
+    border: 1px solid #777;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-align:center;
+}
+
+/* 별점 */
+.star_area .btn_star .fa-star{
+    color: transparent;
+    text-shadow: 0 0 1px rgba(255,255,255,.7), 0 0 0 rgb(0, 0, 0);
+    position: absolute;
+    left: 10%; top: 22%;
+}
+.star_area .btn_star i:hover {text-shadow: 0 0 0 #ea0;}
+.star_area .btn_star i.done {color: #BF2604;text-shadow: 0;}
+.star_area .btn_star i.done:hover {color: transparent;text-shadow: 0 0 0 #777;}
+
+.star {
+    position: relative;
+    font-size: 2rem;
+    color: transparent;text-shadow: 0 0 0 #aaa;
+    line-height: 60px;
+    margin-left: 1%;
+}
+.star_area input {
+    width: 100%;height: 100%;position: absolute;
+    left: 0;opacity: 0;cursor: pointer;
+}
+.star span {
+    width: 0;
+    position: absolute; 
+    left: 0;
+    color: #FFCF00;
+    overflow: hidden;
+    pointer-events: none;
+}
+/* 내용 */
+.review{
+    width: 100%; height: 100%;
+    position: relative;
+}
+.review .new_review{position: absolute; right: 4%; top: 3%; width: 20%;}
+.review .new_review button{
+    font-size: 1.2em; border: 1px solid #781903; background-color: #BF2604; color: #fff;
+    padding: 8%; border-radius: 8px; width: 100%;
+}
+.review .star_count{width: 100%; height: 100%; padding: 1%;padding: 0 5%;}
+.star_count h1{font-size: 2em; padding: 1%;font-weight: bold;}
+.review .star_count .count_box{
+    width: 100%; height: 15%;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 10% 14% 11%;
+}
+.review .star_count .count_box .color_bar{
+    width: 100%; background-color: #FFCF00; position: relative;
+    border: 5px solid #FFCF00; border-radius: 50px; z-index:2;
+}
+.review .star_count .count_box .base_bar{
+	width: 14%;left: 15%;
+    background-color: #aaa;
+    position: absolute;
+    border: 5px solid #aaa;
+    border-radius: 50px;
+    z-index: 1;
+}
+.review .star_count .count_box p {margin:auto;}
+/* 리뷰 보드 */
+.re_main .title{
+    width: 100%; font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.re_main .title h1{font-size: 2em; padding: 0 1%;font-weight: bold;}
+select{margin-right: 5%; padding: 1%;}
+.board{width: 90%; margin: 1% auto;}
+.board table{
+    border-top: 1px solid #555;
+    width: 100%;
+}
+table,th,td,tr{border:1px solid #222; border-collapse: collapse;}
+/* 다섯번째줄 */
+.re_five td:nth-child(2){
+    text-align: right;
+}
+.re_five td:last-child{text-align: right;}
+.re_five td:last-child button{
+    border-bottom: 1px solid #555;
+    padding: 1%; font-size: 1em;
+}
+/* 여섯번째줄 */
+.like_dis{width: 100%;}
+.like_dis button{
+    width: 5%; font-size: 1.5em; margin: 0 0 0 2%;}
+/* 좋아요 */
+.like_btn i{
+    color: transparent;
+    text-shadow: 0 0 1px rgba(255,255,255,.7), 0 0 0 rgb(0, 0, 0);
+}
+.like_btn i:hover {text-shadow: 0 0 0 #ea0;}
+.like_btn i.done {color: #BF2604;text-shadow: 0;}
+.like_btn i.done:hover {color: transparent;text-shadow: 0 0 0 #777;}
+/* 별루 */
+.dislike_btn i{
+    color: transparent;
+    text-shadow: 0 0 1px rgba(255,255,255,.7), 0 0 0 rgb(0, 0, 0);
+}
+.dislike_btn i:hover {text-shadow: 0 0 0 #ea0;}
+.dislike_btn i.done {color: #BF2604;text-shadow: 0;}
+.dislike_btn i.done:hover {color: transparent;text-shadow: 0 0 0 #777;}

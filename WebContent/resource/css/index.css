@@ -1,0 +1,93 @@
+@import url("common.css");
+/* 메인 */
+.innercon{width: 1200px; margin: 0 auto;}
+/* 이미지 슬라이드 */
+.article_img #imgslide{
+    clear: both;
+    height: 30em;
+    position: relative; overflow: hidden;
+    margin: 0 auto;
+}
+#imgslide img{
+    position: absolute;
+    object-fit: inherit;
+    object-position: 10% 30%;
+    /* transition: all, 2s; */
+}
+
+/* 추천순 메뉴 */
+.recom-box{
+    width: 100%; height: 300px;
+}
+.recom-box div{
+    background-color: #FFCF00;
+    width: 30%;
+}
+
+/* mediaquery */
+/* 화면 너비 0 ~ 1220px */
+@media (max-width: 1220px){
+    #imgslide{height: 90%; width:100%; margin: 0 15px;}
+    #imgslide img{width: 100%; object-fit: fill;}
+    .innercon{width: 100%; margin: 0 auto;}
+    .row{margin: 0 15px;}
+    /* 로그인 */
+    .login_box .login_ul li{
+        display: inline-block; width: 100%;
+        font-size: 1.5vw; font-weight: bold; width: 100%;
+    }
+}
+
+/* 화면 너비 0 ~ 1024px */
+@media (max-width: 1024px){
+    /* 메인 */
+    #imgslide{height: 400px;}
+    #imgslide img{width: 100%; margin: 0 15px; object-fit: none;}
+    /* 헤더 */
+    header .gnb{display: none;}
+    .header_cont .login{margin: 0 2%;}
+    /* 메뉴 */
+    .header_cont .login_box{
+        width: 30%; position: absolute; right: 2%; top: 50px;
+    }
+    .login_box .login_ul{
+        display: grid;
+        grid-template-columns: 40% 40% 20%;
+        text-align: center;align-items: baseline;
+    }
+    .login_box .login_ul li{
+        display: inline-block; width: 100%;
+        font-size: 2vw; font-weight: bold; width: 100%;
+    }
+    .login_box .login_ul>li:last-child{display: inline-block;}
+}
+/* 화면 너비 0 ~ 960px */
+@media (max-width: 960px){}
+
+/* 화8 너비 0 ~ 768px */
+@media (max-width: 768px){
+    #imgslide{height: 10em; width:100%;}
+    #imgslide img{width: 100%; object-fit: none; object-position: 100%;}
+    .header_cont .logo img{width: 15%; margin-top: 5%;}
+    .header_cont .login_box{
+        width: 36%; position: absolute; right: 2%; top: 50px;
+    }
+    .menuitemsr li{padding: 120%;}
+    header{height: 100px;}
+}
+
+/* 화면 너비 0 ~ 600px */
+@media (max-width: 600px){}
+/* 화면 너비 0 ~ 480px */
+@media (max-width: 480px){}
+
+/* 화면 너비 0 ~ 320px */
+@media (max-width: 375px){
+    .header_cont .logo img{width: 15%; margin-top: 6%;}
+    .header_cont .login_box{
+        width: 40%; position: absolute; right: 11%; top: 50px;
+    }
+    /* 메뉴 */
+    .menuitemsr li{padding: 130%;}
+    #imgslide>img {width: 300px;}
+}

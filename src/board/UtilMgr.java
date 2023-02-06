@@ -1,0 +1,24 @@
+package board;
+
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+
+public class UtilMgr {
+	public static String con(String s) {
+		String str = null;
+		try {
+			str = new String(s.getBytes("8859_1"),"ksc5601");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		return str;
+	}
+	// 서버에 저장된 파일 삭제
+	public static void delete(String s) {
+		File file = new File(s);
+		if(file.isFile()) {
+			file.delete();
+		}
+	}
+	
+}// 클래스

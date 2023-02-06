@@ -1,0 +1,44 @@
+/* 초기화 */
+th, td, tr {text-align: left;}
+.login{width: 60%; margin: 0 auto;}
+.title{
+    /* background-color: antiquewhite;  */
+    width: 100%; height: 200px; margin: 0 auto;
+    position: relative;
+}
+.title h3{
+    margin-top: 10%;
+    text-align: center;
+    font-size: 3em;
+}
+.title figure{
+    display: block;overflow: hidden;border-radius: 50%;
+    width: 18%; height: 75%;object-fit: cover;
+    position: absolute; right: 43%;
+}
+.title figure img{
+    width: 100%;
+}
+form{width: 80%; padding: 5%; margin: 0 auto;}
+table{width: 96%;}
+th{padding: 1%;}
+td{padding: 2% 0;}
+input{width: 100%; padding: 2%; margin: 1% 0;}
+.btn_login{
+    display: inline-block; width: 250px; height: 50px;
+    line-height: 30px; background-color: #BF2604;
+    font-weight: bold; border-radius: 20px;
+    font-size: 1.2em; color: #fff !important;
+}
+td:last-child{text-align: center;}
+.link{color: #008cff; font-size: 0.9em; font-weight: bold;}
+hr{width: 40%; height: 1px; display: inline-block; background-color: #31fef7; margin-bottom: 3px;}
+
+
+/* 미디어쿼리 */
+@media (max-width: 768px){
+    .title{
+        width: 100%; height: 120px; margin: 0 auto;
+        position: relative;
+    }
+}

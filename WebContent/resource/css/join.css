@@ -1,0 +1,211 @@
+/* 전체 */
+
+
+/* 회원가입 메인 */
+/*초기화*/
+#container{}
+.w160{width: 160px !important;}
+.w100p{width: 100% !important;}
+input, select, textarea,button,label{
+    vertical-align: middle;
+}
+fieldset{
+    border: none;
+}
+legend{
+    font-size: 0;width: 0;height: 0;line-height: 0;
+    text-indent: -999px;
+    overflow: hidden;
+    visibility: hidden;
+    position: absolute; top: 0; left: 0;
+}
+/* 초기화 끝 */
+
+/* 타이틀 */
+.location_area{
+	height: 180px;
+}
+.location_area .tit_page{
+	padding: 5% 0 1% 0;
+	margin: 1% 5%;
+	border-bottom: 2px solid #595302;
+	font-size: 2.5em;
+	letter-spacing: 0.1em;
+}
+.location_area .tit_page .in{
+	font-variant: small-caps;
+}
+.location_area .location{
+	padding: 1.5% 0 0 8%;
+}
+
+/* 회원가입 */
+.body_text_area{
+    margin: 0px auto;
+    width: 75%;
+    box-sizing: border-box;
+	padding: 5% 2%;
+}
+.appForm{
+    width: 100%;
+    margin: 0 auto;
+    padding: 4%;
+}
+.appForm .info_pilsoo{
+	position: relative;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #595302;
+	font-size: 15px; color: #f00;
+	font-weight: bold;
+}
+.appForm .pilsoo_item::before{
+    content: "*";
+    display: inline-block;
+    position: absolute;
+    left: 5px; top: 3px;
+    width: 15px;
+    font-weight: bold; font-size: 17px;
+    color: #f00;
+}
+.appForm .app_list{
+	padding: 4% 0;
+}
+.appForm .app_list li{
+	padding: 1% 0;
+}
+.appForm .app_list li .tit_lbl{
+	/* 날라다니던 *을 포지션으로 위치 잡아줌 */
+	position: relative;
+	float: left;
+	padding-left: 3%;
+	width: 100%; height: 42px;
+	line-height: 42px;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: -1px;
+}
+.appForm .app_list li .app_content{
+	width: 100%;
+	float: right;
+}
+.appForm .app_list li .app_content *{
+	vertical-align: top;
+}
+.appForm .app_list li .select_common select{
+	width: 100%; height: 40px;
+}
+.appForm .app_list li .app_content.email_area .ico_space{
+	display: inline-block; padding-top: 10px;
+}
+/* type = checkbox */
+.appForm .app_list li .app_content.checkbox_area{
+	height: 45px;
+	box-sizing: border-box;
+	padding: 1% 5%;
+}
+.appForm .app_list li .app_content label{
+	vertical-align: middle;
+}
+
+input{
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;padding: 0 3%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    line-height: normal;
+    font-size: 1em;
+}
+input[type=button]{
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;padding: 0 10px;
+    border: 1px solid #ccc;
+    background-color: #BF2604;
+    color: #fff;
+    line-height: normal;
+    font-size: 1em;
+}
+.postcode{width: 45%;}
+    
+/* 체크박스 */
+input[type=checkbox].css-checkbox{
+    overflow: hidden;position: absolute;
+    width: 20px;height: 25px;
+}
+input[type=checkbox].css-checkbox + label{
+    display: inline-block;
+    /* width: 20px; */
+    height: 20px; line-height: 20px !important;
+    padding-left: 25px;
+    /* background-image: url("../img/img16.png"); */
+    background-repeat: no-repeat;
+    background-size: 20px 40px;
+    background-position: 0 0;
+    cursor: pointer;
+    font-size: 15px;vertical-align: middle;
+}
+ input[type=checkbox].css-checkbox:checked + label{
+    background-position: 0 -20px;
+}
+
+/* 버튼 */
+.btn_line{
+    text-align: center;
+    font-size: 0;
+    border-top: 1PX solid #595302;
+    margin-top: 10%;
+    padding: 5% 0;
+}
+.btn_baseColor{
+    display: inline-block; width: 20%; height: 50px;
+    background-color: #BF2604;
+    font-size: 1.5vw; color: #fff !important;
+}
+
+/* mediaquery */
+/* 화면 너비 0 ~ 1220px */
+@media (max-width: 1220px){
+}
+
+/* 화면 너비 0 ~ 1024px */
+@media (max-width: 1024px){
+}
+/* 화면 너비 0 ~ 960px */
+@media (max-width: 960px){}
+
+/* 화8 너비 0 ~ 768px */
+@media (max-width: 768px){
+    .btn_line{
+        margin-top: 15%;
+    }
+}
+
+/* 화면 너비 0 ~ 600px */
+@media (max-width: 600px){}
+/* 화면 너비 0 ~ 480px */
+@media (max-width: 480px){}
+
+/* 화면 너비 0 ~ 320px */
+@media (max-width: 375px){
+    .location_area{height: 100px;}
+    .location_area .tit_page{font-size: 1.5em;}
+    .appForm .pilsoo_item::before{
+        content: "*";left: 5px; top: 1px; font-size: 20px;
+    }
+    .appForm .pilsoo_item:first-child:before{
+        content: "*";left: -5px;font-size: 20px; top: 3px;
+    }
+    input{
+        font-size: 0.8em;
+    }
+    .postcode{width: 45%;}
+    .btn_baseColor{
+        width: 100px;
+        line-height: 0px; background-color: #BF2604;
+        font-size: 4vw; color: #fff !important;
+    }
+
+}
